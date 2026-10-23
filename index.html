@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CineScope | Khám phá phim</title>
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/app.js" defer></script>
+</head>
+<body>
+  <header class="header">
+    <a class="logo" href="index.html">🎬 Movie<span>Discovery</span></a>
+    <div class="header-actions"><span>Khám phá thế giới điện ảnh</span><label class="theme-control"><input id="themeToggle" type="checkbox" aria-label="Bật chế độ tối"><span class="switch"></span><span id="themeLabel">Chế độ tối</span></label></div>
+  </header>
+  <div class="layout">
+    <aside class="sidebar">
+      <h2>Bộ lọc phim</h2>
+      <label for="searchInput">Tìm theo tên</label>
+      <input id="searchInput" type="text" placeholder="Nhập tên phim..." autocomplete="off">
+      <div class="filter-heading"><h3>Thể loại</h3><button id="clearFilters" type="button">Xóa lọc</button></div>
+      <div id="genreFilters" class="genres"></div>
+    </aside>
+    <main class="main">
+      <section class="hero"><div class="eyebrow">MOVIE DISCOVERY</div><h1>Hôm nay xem phim gì?</h1><p>Tìm kiếm những câu chuyện đáng nhớ, lọc theo thể loại yêu thích và khám phá thông tin chi tiết.</p></section>
+      <div class="section-heading"><h2>Danh sách phim</h2><span id="resultCount" aria-live="polite"></span></div>
+      <div id="movieGrid" class="movie-grid"></div>
+      <div id="emptyState" class="empty" hidden>Không tìm thấy phim phù hợp. Hãy thử từ khóa hoặc thể loại khác.</div>
+    </main>
+  </div>
+  <footer class="footer"><p>© 2026 CineScope • Bài tập Movie Discovery App</p><nav aria-label="Bài tập trước"><span>Bài tập trước:</span> <span>Bài 37</span> · <span>Bài 38</span> · <span>Bài 39</span> <small>(Thay bằng liên kết khi có URL)</small></nav></footer>
+  <div id="movieModal" class="modal" hidden><div class="modal-backdrop" data-close="true"></div><div class="modal-panel" role="dialog" aria-modal="true" aria-labelledby="modalTitle" tabindex="-1"><button id="closeModal" class="close-modal" type="button" aria-label="Đóng">×</button><div id="modalContent"></div></div></div>
+</body>
+</html>
